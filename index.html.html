@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Ashley 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      color: white;
+    }
+
+    .center-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 10;
+    }
+
+    .center-message a {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5.5em;
+      text-decoration: none;
+      color: #ff66c4;
+      text-shadow: 0 0 10px #ff66c4, 0 0 20px #ffb3e6, 0 0 30px #ff66c4;
+      animation: glow 3s ease-in-out infinite;
+      cursor: pointer;
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 10px #ff66c4, 0 0 20px #ffb3e6, 0 0 30px #ff66c4;
+      }
+      50% {
+        text-shadow: 0 0 20px #ff99cc, 0 0 40px #ff66c4, 0 0 60px #ff99cc;
+      }
+    }
+
+    .love-text {
+      position: absolute;
+      color: #00ffe1;
+      font-size: 14px;
+      white-space: nowrap;
+      animation: move 12s linear infinite;
+      opacity: 0.6;
+      text-shadow: 0 0 5px #00ffe1, 0 0 10px #00ffe1;
+      font-style: italic;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      z-index: 2;
+      padding: 0 10px;
+      letter-spacing: 0.3em;
+    }
+
+    @keyframes move {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100vw); }
+    }
+
+    .burst {
+      position: absolute;
+      font-size: 12px;
+      color: #ff66c4;
+      opacity: 0.9;
+      pointer-events: none;
+      font-style: italic;
+      animation: explode 5s ease-out forwards;
+      font-family: 'Inter', sans-serif;
+      z-index: 3;
+    }
+
+    @keyframes explode {
+      0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(3) translate(var(--x), var(--y));
+        opacity: 0;
+      }
+    }
+
+    .photo-background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .photo-background img {
+      position: absolute;
+      max-width: 80vw;
+      max-height: 80vh;
+      filter: brightness(0.5);
+      opacity: 0;
+      animation: appearAndDisappear 10s ease-in-out infinite;
+      object-fit: contain;
+    }
+
+    @keyframes appearAndDisappear {
+      0% { transform: scale(0.8); opacity: 0; }
+      10% { opacity: 0.5; }
+      40% { transform: scale(1); opacity: 0.75; }
+      60% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .photo-background img:nth-child(1) { animation-delay: 0s; left: 5%; top: 5%; }
+    .photo-background img:nth-child(2) { animation-delay: 2s; left: 60%; top: 10%; }
+    .photo-background img:nth-child(3) { animation-delay: 4s; left: 25%; top: 65%; }
+    .photo-background img:nth-child(4) { animation-delay: 6s; left: 15%; top: 35%; }
+    .photo-background img:nth-child(5) { animation-delay: 8s; left: 55%; top: 30%; }
+    .photo-background img:nth-child(6) { animation-delay: 10s; left: 10%; top: 50%; }
+    .photo-background img:nth-child(7) { animation-delay: 12s; left: 45%; top: 10%; }
+    .photo-background img:nth-child(8) { animation-delay: 14s; left: 40%; top: 70%; }
+    .photo-background img:nth-child(9) { animation-delay: 16s; left: 20%; top: 20%; }
+    .photo-background img:nth-child(10) { animation-delay: 18s; left: 70%; top: 50%; }
+    .photo-background img:nth-child(11) { animation-delay: 20s; left: 30%; top: 15%; }
+
+    #timer {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #ffd1e9;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="photo-background">
+    <img src="https://i.imgur.com/t2S7mzX.jpg" alt="foto1">
+    <img src="https://i.imgur.com/w2tFcUs.jpg" alt="foto2">
+    <img src="https://i.imgur.com/zOnTSRF.jpg" alt="foto3">
+    <img src="https://i.imgur.com/WyU18UK.jpg" alt="foto4">
+    <img src="https://i.imgur.com/irE0YlZ.jpg" alt="foto5">
+    <img src="https://i.imgur.com/buTF9GH.jpg" alt="foto6">
+    <img src="https://i.imgur.com/PhYlar5.jpg" alt="foto7">
+    <img src="https://i.imgur.com/d6vczYS.jpg" alt="foto8">
+    <img src="https://i.imgur.com/Kbwi0vk.jpg" alt="foto9">
+    <img src="https://i.imgur.com/PVo6LYD.jpg" alt="foto10">
+    <img src="https://i.imgur.com/YuIGMOs.jpg" alt="foto11">
+  </div>
+
+  <div class="center-message">
+    <a href="#" onclick="toggleTimer()">Te amo, Ashley ❤️</a>
+    <div id="timer"></div>
+  </div>
+
+  <script>
+    const frases = [
+      "Eres la persona que ilumina mi camino ☀️",
+      "Siempre tú 💘",
+      "Contigo todo, sin ti nada 💔",
+      "Mi persona favorita 💕",
+      "Siempre pienso en ti ✨",
+      "Mi corazón es tuyo ❤️",
+      "Cada latido es por ti 💓",
+      "Infinity Love ♾️",
+      "Te elijo hoy y siempre 💍",
+      "Tus besos me derriten ✨"
+    ];
+
+    const palabras = [
+      "Trabajadora", "Amorosa", "Bella", "Renegona", "Engreída", "Cariñosa",
+      "Alegre", "Dulce", "Tierna", "Apasionada", "Única", "Sincera",
+      "Brillante", "Divertida", "Sensual", "Hermosa", "Encantadora"
+    ];
+
+    for (let i = 0; i < 100; i++) {
+      const text = document.createElement("div");
+      text.className = "love-text";
+      text.style.top = `${Math.random() * 100}vh`;
+      text.style.left = `${Math.random() * 100}vw`;
+      text.style.fontSize = `${12 + Math.random() * 10}px`;
+      text.style.animationDuration = `${8 + Math.random() * 8}s`;
+      text.textContent = frases[Math.floor(Math.random() * frases.length)];
+      document.body.appendChild(text);
+
+      text.addEventListener('click', function (e) {
+        for (let j = 0; j < 10; j++) {
+          const burst = document.createElement("div");
+          burst.className = "burst";
+          burst.textContent = palabras[Math.floor(Math.random() * palabras.length)];
+          burst.style.left = `${e.clientX}px`;
+          burst.style.top = `${e.clientY}px`;
+          burst.style.setProperty('--x', `${(Math.random() - 0.5) * 200}px`);
+          burst.style.setProperty('--y', `${(Math.random() - 0.5) * 200}px`);
+          document.body.appendChild(burst);
+          setTimeout(() => burst.remove(), 5000);
+        }
+      });
+    }
+
+    function toggleTimer() {
+      const timer = document.getElementById("timer");
+      if (timer.style.display === "block") {
+        timer.style.display = "none";
+        return;
+      }
+      timer.style.display = "block";
+      const startDate = new Date("2021-05-14T00:00:00");
+      function updateTimer() {
+        const now = new Date();
+        const diff = now - startDate;
+
+        const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24)) % 365;
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        timer.textContent = `Llevamos juntos ${years} años, ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos ❤️`;
+      }
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    }
+  </script>
+</body>
+</html>
